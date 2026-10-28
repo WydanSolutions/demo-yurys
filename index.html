@@ -944,6 +944,80 @@ svg.linea{width:100%;display:block;overflow:visible}
 .imp-mon button.on .mb{background:var(--prim);color:#fff}
 .tope-tc>span>span{white-space:nowrap}
 
+/* ---- Caja central ---- */
+.cen-saldos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cen-mon{position:relative;overflow:hidden;padding:18px 20px;border-radius:20px;color:#fff;display:flex;flex-direction:column;gap:4px;
+  background:radial-gradient(260px 160px at 100% 0%,rgba(227,34,31,.35),transparent 70%),linear-gradient(130deg,var(--prim-prof),var(--prim));box-shadow:0 16px 40px rgba(23,20,90,.25);
+  animation:pop .5s var(--ease) both;animation-delay:calc(var(--i) * 80ms)}
+.cen-mon::after{content:'';position:absolute;right:-70px;bottom:-80px;width:240px;height:120px;border-radius:100px;border:2px solid rgba(255,255,255,.08);transform:rotate(-10deg)}
+.cen-mon.cambia{animation:festejo .9s var(--ease)}
+.cen-mon-cab{display:flex;align-items:center;gap:10px}
+.cen-mon-cab small{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:800;color:#C9C8EE}
+.cen-mon-cab b{font-size:15px}
+.cen-sim{min-width:44px;height:44px;padding:0 8px;border-radius:13px;display:inline-flex;align-items:center;justify-content:center;font-family:var(--f-titulo);font-weight:900;font-size:16px;background:rgba(255,255,255,.14);color:#fff}
+.cen-sim.chico{min-width:34px;height:30px;font-size:13px;border-radius:9px;background:var(--prim);color:#fff}
+.cen-v{font-family:var(--f-titulo);font-size:36px;font-weight:900;letter-spacing:-1px;line-height:1.1;margin-top:8px}
+.cen-eq{font-size:12.5px;color:#ADACD8}
+.cen-ant{display:flex;gap:7px;align-items:center;font-size:13px;color:#FFD88A;margin:8px 0 10px;font-weight:600}
+.cen-ant.ok{color:#7FE3AE}
+.cen-ant svg.ico{width:16px;height:16px}
+.cen-mon .btn{align-self:flex-start;position:relative;z-index:1}
+.cen-mon .btn-linea{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff}
+.cen-hoy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.cen-dato{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:2px;padding:13px 16px;border-radius:14px;background:#fff;border:1px solid var(--borde-2);box-shadow:var(--sombra);transition:.2s var(--ease)}
+.cen-dato:hover{transform:translateY(-2px);border-color:var(--prim)}
+.cen-dato small{font-size:11.5px;letter-spacing:.8px;text-transform:uppercase;font-weight:800;color:var(--texto-3)}
+.cen-dato b{font-family:var(--f-titulo);font-size:17px;font-weight:900;color:var(--prim-prof)}
+.cen-dato>span{font-size:12.5px;color:var(--texto-3)}
+.rec-cajas{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:6px}
+.rec-cajas button{padding:7px 0;border-radius:11px;border:2px solid var(--borde-2);background:#fff;display:flex;flex-direction:column;align-items:center;transition:.15s}
+.rec-cajas button small{font-size:9.5px;letter-spacing:1px;text-transform:uppercase;font-weight:800;color:var(--texto-3)}
+.rec-cajas button b{font-family:var(--f-titulo);font-size:22px;font-weight:900;color:var(--prim-prof);line-height:1.1}
+.rec-cajas button:hover{border-color:var(--prim)}
+.rec-cajas button.on{border-color:var(--acento);background:var(--acento-suave)}
+.rec-cajas button.on b{color:var(--acento)}
+.cm-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start}
+.cm{border:1px solid var(--borde-2);border-radius:16px;padding:12px;background:var(--fondo);display:flex;flex-direction:column;gap:8px}
+.cm-cab{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cm-cab b{font-size:14.5px}
+.cm-toggle{margin-left:auto;font-size:12.5px}
+.cm .con-pre.grande input{font-size:22px}
+.cm input.de-conteo{color:var(--verde)}
+.cm-conteo{display:flex;flex-direction:column;gap:4px;padding-top:4px;border-top:1px dashed var(--borde);animation:caer .25s var(--ease)}
+.cm-b{display:grid;grid-template-columns:minmax(0,1fr) 14px 64px minmax(0,1fr);align-items:center;gap:6px;font-size:13px}
+.cm-billete{display:inline-flex;align-items:center;justify-content:center;padding:4px 6px;border-radius:7px;font-weight:800;font-size:12px;color:var(--verde);background:linear-gradient(90deg,var(--verde-bg),#EEF8F2);border:1px solid #BFE3CE;white-space:nowrap}
+.cm-monedas .cm-billete{color:var(--amarillo);background:var(--amarillo-bg);border-color:#EFD999}
+.cm-x{color:var(--texto-3);text-align:center}
+.cm-b input{width:100%;padding:6px 8px;border-radius:8px;border:1px solid var(--borde);text-align:right;font-weight:700;background:#fff}
+.cm-b input:focus{outline:none;border-color:var(--prim);box-shadow:0 0 0 3px rgba(35,31,127,.1)}
+.cm-b em{font-style:normal;text-align:right;font-weight:700;color:var(--texto-2);font-size:12.5px;white-space:nowrap}
+.cm-total{display:flex;justify-content:space-between;align-items:baseline;padding-top:6px;border-top:1px solid var(--borde);font-weight:700;color:var(--texto-2)}
+.cm-total b{font-family:var(--f-titulo);font-size:17px;color:var(--prim-prof)}
+.cm-deberia{width:100%;font-size:12.5px;color:var(--texto-3)}
+.cm-deberia b{color:var(--prim-prof)}
+.cm-res b{font-size:18px!important}
+.arq-dif{margin-top:6px;padding:8px 10px;border-radius:10px;background:var(--fondo);font-size:13px;font-weight:700;color:var(--texto-3);display:flex;gap:6px;align-items:center}
+.arq-dif svg.ico{width:16px;height:16px}
+.arq-dif.ok{background:var(--verde-bg);color:var(--verde)}
+.arq-dif.mal{background:var(--rojo-bg);color:var(--rojo)}
+.cm-ver{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.cm-ver-m{padding:14px;border-radius:14px;background:var(--fondo);display:flex;flex-direction:column;gap:6px}
+.cm-ver-v{font-family:var(--f-titulo);font-size:26px;font-weight:900;color:var(--prim-prof)}
+.cm-chips{display:flex;flex-wrap:wrap;gap:5px}
+.cm-chip{font-size:12px;font-weight:700;padding:2px 8px;border-radius:7px;background:#fff;border:1px solid var(--borde-2)}
+.dba-mon{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.dba-mon button{display:flex;align-items:center;gap:9px;padding:10px;border-radius:13px;border:2px solid var(--borde-2);background:#fff;text-align:left;transition:.15s}
+.dba-mon button>span:last-child{display:flex;flex-direction:column;min-width:0}
+.dba-mon button small{font-size:12px;color:var(--texto-3)}
+.dba-mon button.on{border-color:var(--prim);background:var(--prim-tenue)}
+.dba-mon button:not(.on) .cen-sim{background:var(--fondo-2);color:var(--texto-3)}
+.dba-rap{display:flex;gap:5px;margin-left:auto}
+.dba-rap .pildora{padding:3px 10px;font-size:12px}
+.dba-rap+.cm-toggle{margin-left:0}
+.cm-grid:not(.tres) .cm:has(.cm-conteo:not(.hidden)){grid-column:1/-1}
+.cm-grid:not(.tres) .cm:has(.cm-conteo:not(.hidden)) .cm-conteo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px}
+.cm-grid:not(.tres) .cm:has(.cm-conteo:not(.hidden)) .cm-total{grid-column:1/-1}
+
 
 /* ===== css/03-celular.css ===== */
 /* ================================================================
@@ -1125,6 +1199,20 @@ svg.linea{width:100%;display:block;overflow:visible}
   .cajas-hoy{grid-template-columns:repeat(3,minmax(0,1fr))}
   .ch-s{display:none}
 }
+/* Caja central en pantallas medianas y en el celular */
+@media (max-width:1150px){
+  .cen-saldos,.cen-hoy{grid-template-columns:minmax(0,1fr)}
+  .cm-grid.tres{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:700px){
+  .cm-grid{grid-template-columns:minmax(0,1fr)}
+  .rec-cajas{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .dba-mon{grid-template-columns:minmax(0,1fr)}
+  .cen-v{font-size:30px}
+  .cen-mon{padding:15px 16px}
+  .cm-b{grid-template-columns:minmax(0,1fr) 12px 70px minmax(0,1fr)}
+}
+@media (max-width:700px){ .cm-grid:not(.tres) .cm:has(.cm-conteo:not(.hidden)) .cm-conteo{grid-template-columns:minmax(0,1fr)} }
 
 </style>
 </head>
@@ -1347,6 +1435,8 @@ const ICONOS = {
   borrarTecla:'<path d="M8.5 5H20v14H8.5L3 12z"/><path d="m11.5 9.5 5 5M16.5 9.5l-5 5"/>',
   salir:'<path d="M14 4h5.5v16H14"/><path d="M10 8l-4 4 4 4M6 12h10"/>',
   rayo:'<path d="M13 2.5 4.5 13.5H11l-1 8 8.5-11H12z"/>',
+  calculadora:'<rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M8 6.5h8v3H8zM8.5 13h.5M12 13h.5M15.5 13h.5M8.5 16.5h.5M12 16.5h.5M15.5 16.5h.5"/>',
+  recibir:'<path d="M3 14.5h4l2.5 2h4a1.5 1.5 0 0 0 0-3H11"/><path d="M7 18.5h9l4.5-4a1.5 1.5 0 0 0-2-2.2L15 15"/><rect x="9" y="3.5" width="10" height="6" rx="1.2"/><circle cx="14" cy="6.5" r="1.2"/>',
   escudo:'<path d="M12 3 4 6.5v5c0 4.6 3.4 8.4 8 9.5 4.6-1.1 8-4.9 8-9.5v-5z"/>'
 };
 function ico(nombre, extra){ return `<svg class="ico ${extra||''}" viewBox="0 0 24 24" aria-hidden="true">${ICONOS[nombre]||''}</svg>`; }
@@ -1396,6 +1486,13 @@ const MONEDAS = {
   BRL: { s:'R$',  t:'Reales',  c:'BRL', dec:2 }
 };
 const ORDEN_MONEDAS = ['USD', 'UYU', 'BRL'];
+
+// Billetes de cada moneda, para contar el efectivo (lo que no es billete va en «Monedas»).
+const BILLETES = {
+  USD: [100, 50, 20, 10, 5, 2, 1],
+  UYU: [2000, 1000, 500, 200, 100, 50, 20],
+  BRL: [200, 100, 50, 20, 10, 5, 2]
+};
 
 // Medios por los que llega un anticipo.
 const MEDIOS = ['Transferencia bancaria', 'Depósito bancario', 'PIX', 'Efectivo en tesorería'];
@@ -1634,7 +1731,7 @@ const Store = {
     let d = null;
     try { d = JSON.parse(localStorage.getItem(CLAVE_GUARDADO) || 'null'); } catch (e) { d = null; }
     // El demo SIEMPRE tiene ejemplos: si la copia está vacía, rota o es de otra versión, se vuelve a sembrar.
-    if (!d || d.version !== 1 || !Array.isArray(d.clientes) || d.clientes.length < 5 || !Array.isArray(d.mov) || d.mov.length < 20) d = crearDatosEjemplo(hoy());
+    if (!d || d.version !== 2 || !Array.isArray(d.rendiciones) || !Array.isArray(d.clientes) || d.clientes.length < 5 || !Array.isArray(d.mov) || d.mov.length < 20) d = crearDatosEjemplo(hoy());
     this.data = d;
     moverFechas(d, hoy());   // la demo siempre "vive" en el día de hoy
     this.guardar();
@@ -1660,7 +1757,7 @@ function moverFechas(d, h){
     else if (o && typeof o === 'object') Object.keys(o).forEach(k => {
       if (k === 'f' || k === 'alta') o[k] = m(o[k]); else if (o[k] && typeof o[k] === 'object') recorrer(o[k]);
     });
-  })([d.clientes, d.mov, d.cierres, d.pedidos, d.log]);
+  })([d.clientes, d.mov, d.cierres, d.pedidos, d.log, d.rendiciones, d.bancos, d.arqueos]);
   d.base = h;
 }
 
@@ -1804,6 +1901,81 @@ const porMonedaTxt = porM => ORDEN_MONEDAS.filter(m => porM[m]).map(m => dinero(
 const pedidosPendientes = () => D().pedidos.filter(p => p.est === 'pendiente');
 
 
+/* ===== js/04-ejemplo-central.js ===== */
+/* =====================================================================
+   DATOS DE EJEMPLO DE LA CAJA CENTRAL (todos INVENTADOS)
+   - Cada noche cada caja le entrega su efectivo a la Caja 10 (cierre del día).
+   - A la mañana siguiente la Tesorería deposita en el banco lo del día anterior.
+   - Para que la demo muestre algo para hacer: de ayer quedan sin depositar
+     los pesos y los reales, y hoy ya hubo retiros parciales de algunas cajas.
+   ===================================================================== */
+function ejemploCajaCentral(d, h, rnd){
+  const entre = (a, b) => a + rnd() * (b - a);
+  const red = (v, m) => m === 'UYU' ? Math.round(v / 100) * 100 : Math.round(v / 10) * 10;
+  const ahora = new Date(), min = ahora.getHours() * 60 + ahora.getMinutes();
+  const driveId = () => { let s = '1'; const a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'; for (let i = 0; i < 32; i++) s += a[Math.floor(rnd() * a.length)]; return s; };
+  const neto = {};   // efectivo que entró a la Caja 10 cada día, por moneda
+  const sumar = (f, m, v) => { neto[f] = neto[f] || { USD:0, UYU:0, BRL:0 }; neto[f][m] = r2(neto[f][m] + v); };
+
+  // ---------- Entregas de las cajas ----------
+  for (let k = 45; k >= 0; k--){
+    const f = sumarDias(h, -k);
+    CAJAS.forEach(caja => {
+      let r;
+      if (k === 0){
+        // Hoy: a media tarde la Tesorería retiró efectivo de las cajas que más venden
+        if (caja > 4 || min < 13 * 60 + 40) return;
+        r = { tipo:'Retiro parcial', h:'13:' + p2(10 + caja * 5), porM:{ USD:red(entre(500, 1400), 'USD'), UYU:red(entre(3000, 9000), 'UYU'), BRL:red(entre(400, 1400), 'BRL') } };
+      } else {
+        if (caja === 9 && rnd() < .35) return;   // la Caja 9 no abre todos los días
+        const fuerte = caja <= 3 ? 1.4 : caja >= 8 ? .7 : 1;
+        r = { tipo:'Cierre del día', h:'20:' + p2(caja * 5 + Math.floor(rnd() * 4)), porM:{ USD:red(entre(900, 4000) * fuerte, 'USD'), UYU:red(entre(4000, 26000) * fuerte, 'UYU'), BRL:red(entre(700, 5000) * fuerte, 'BRL') } };
+      }
+      d.rendiciones.push(Object.assign({ id:Store.id('r'), f, caja, u: rnd() < .85 ? 'Tesorería' : 'Administración', nota:'' }, r));
+      ORDEN_MONEDAS.forEach(m => sumar(f, m, r.porM[m]));
+    });
+  }
+  // Una entrega con el conteo de billetes cargado (la de ayer de la Caja 1), para que se vea
+  const ayer = sumarDias(h, -1), r1 = d.rendiciones.find(r => r.f === ayer && r.caja === 1);
+  if (r1){
+    r1.billetes = {};
+    ORDEN_MONEDAS.forEach(m => {
+      let resto = r1.porM[m]; const b = {};
+      BILLETES[m].forEach((v, i) => { const n = i === BILLETES[m].length - 1 ? Math.floor(resto / v) : Math.floor(resto / v * (.35 + rnd() * .3)); if (n > 0){ b[v] = n; resto = r2(resto - n * v); } });
+      if (resto > 0) b.mon = r2(resto);
+      r1.billetes[m] = b;
+    });
+  }
+
+  // El efectivo de los clientes que pagan en la Tesorería también entra a la caja central (y las devoluciones salen)
+  d.mov.forEach(x => {
+    if (x.anul || x.medio !== 'Efectivo en tesorería') return;
+    if (x.tipo === 'dep' && x.est !== 'pendiente') sumar(x.f, x.m, x.imp);
+    if (x.tipo === 'dev') sumar(x.f, x.m, -x.imp);
+  });
+
+  // ---------- Depósitos al banco: a la mañana siguiente, todo lo del día anterior ----------
+  const CUENTA = { USD:'c1', UYU:'c2', BRL:'c3' };
+  Object.keys(neto).sort().forEach(f => {
+    if (f >= h) return;
+    const fd = sumarDias(f, 1);
+    ORDEN_MONEDAS.forEach((m, i) => {
+      const v = neto[f][m]; if (v <= 0) return;
+      if (f === ayer && (m !== 'USD' || min < 11 * 60)) return;   // de ayer: quedan los pesos y los reales (y los dólares si todavía no son las 11)
+      d.bancos.push({ id:Store.id('b'), f:fd, h:'10:' + p2(20 + i * 9 + Math.floor(rnd() * 6)), m, imp:v, cuenta:CUENTA[m], boleta:String(Math.floor(entre(1000000, 9999999))),
+        link:'https://drive.google.com/file/d/' + driveId() + '/view', ejemplo:true, del:f, u: rnd() < .85 ? 'Tesorería' : 'Administración', nota:'' });
+    });
+  });
+
+  // Un arqueo de anoche: la Tesorería contó y estaba todo bien
+  d.arqueos.push({ id:Store.id('a'), f:ayer, h:'20:58', u:'Tesorería', dif:{ USD:0, UYU:0, BRL:0 }, nota:'Arqueo del cierre' });
+
+  // Historial de hoy y de ayer
+  d.rendiciones.filter(r => r.f >= ayer).forEach(r => d.log.push({ f:r.f, h:r.h, u:r.u, a:`Recibió de la Caja ${r.caja} (${r.tipo.toLowerCase()}): ${ORDEN_MONEDAS.map(m => dinero(r.porM[m], m)).join(' · ')}` }));
+  d.bancos.filter(b => b.f >= ayer).forEach(b => d.log.push({ f:b.f, h:b.h, u:b.u, a:`Depositó en el banco ${dinero(b.imp, b.m)} (boleta ${b.boleta})` }));
+}
+
+
 /* ===== js/04-ejemplo.js ===== */
 /* =====================================================================
    DATOS DE EJEMPLO (todos INVENTADOS: nombres, documentos, teléfonos, importes)
@@ -1818,7 +1990,7 @@ const NOTAS_EJ = ['Compra para revender. Prefiere que le avisen por WhatsApp.', 
 function crearDatosEjemplo(h){
   const rnd = azar(20261028), elegir = a => a[Math.floor(rnd() * a.length)];
   const entre = (a, b) => a + rnd() * (b - a), entero = (a, b) => Math.floor(entre(a, b + 1));
-  const d = { version:1, base:h, seq:0, config:JSON.parse(JSON.stringify(CONFIG_INICIAL)), clientes:[], mov:[], cierres:[], pedidos:[], log:[], avisos:{}, ultimo:null };
+  const d = { version:2, rendiciones:[], bancos:[], arqueos:[], base:h, seq:0, config:JSON.parse(JSON.stringify(CONFIG_INICIAL)), clientes:[], mov:[], cierres:[], pedidos:[], log:[], avisos:{}, ultimo:null };
   Store.data = d;   // Store.id() necesita los datos ya cargados
   const DIAS_HIST = 215;
   // Cotización de cada día (varía un poco, como en la realidad)
@@ -1959,6 +2131,7 @@ function crearDatosEjemplo(h){
   d.cierres.filter(k => difDias(k.f, h) <= 2).forEach(k => d.log.push({ f:k.fh, h:k.h, u:k.u, a:`Cubrió a la Caja ${k.caja} (${fCorta(k.f)}): ${usd(k.usd)} en ${k.n} compras` }));
   d.pedidos.forEach(p => d.log.push({ f:p.f, h:p.h, u:p.u, a:'Pidió anular una compra cargada dos veces' }));
   d.log.sort((a, b) => (b.f + b.h).localeCompare(a.f + a.h));
+  ejemploCajaCentral(d, h, rnd);
   d.clientes.forEach(c => { delete c._p; delete c._s; });
   return d;
 }
@@ -2131,6 +2304,7 @@ const SECCIONES = [
   { id:'clientes',  t:'Clientes',          ico:'clientes',  ver:['todo'], sep:true },
   { id:'depositos', t:'Depósitos',         ico:'deposito',  ver:['todo'] },
   { id:'cuadre',    t:'Cuadre de cajas',   ico:'cuadre',    ver:['todo'] },
+  { id:'central',   t:'Caja central',      ico:'tesoreria', ver:['todo'] },
   { id:'reportes',  t:'Reportes',          ico:'reportes',  ver:['todo'], sep:true },
   { id:'historial', t:'Historial',         ico:'historial', ver:['todo'] },
   { id:'config',    t:'Configuración',     ico:'config',    ver:['todo'] }
@@ -2227,6 +2401,10 @@ function alertas(){
     if (cub.length) a.push({ k:'cub', n:cub.length, t: cub.length === 1 ? `La Caja ${cub[0].caja} quedó sin cubrir (${cuando(cub[0].f)})` : cub.length + ' cajas de días anteriores sin cubrir', nivel:'rojo', ir:`verCuadre('${cub[0].f}')` });
     if (pend.length) a.push({ k:'pend', n:pend.length, t: pend.length === 1 ? 'Un depósito a confirmar en el banco' : pend.length + ' depósitos a confirmar en el banco', nivel:'amarillo', ir:"verDepositos('pendiente')" });
     if (sinLink.length) a.push({ k:'link', n:sinLink.length, t: sinLink.length === 1 ? 'Un depósito sin el comprobante' : sinLink.length + ' depósitos sin el comprobante', nivel:'amarillo', ir:"verDepositos('sinlink')" });
+    const efe = ORDEN_MONEDAS.filter(m => sinDepositarAnterior(m) > 0.004);
+    if (efe.length) a.push({ k:'efe', n:efe.length, t:'Efectivo de días anteriores sin depositar: ' + efe.map(m => dinero(sinDepositarAnterior(m), m)).join(' · '), nivel:'amarillo', ir:"ir('central')" });
+    const banSin = D().bancos.filter(b => !b.link);
+    if (banSin.length) a.push({ k:'bansin', n:banSin.length, t: banSin.length === 1 ? 'Un depósito al banco sin el comprobante' : banSin.length + ' depósitos al banco sin el comprobante', nivel:'amarillo', ir:"CEN.tab = 'banco'; CEN.per = 'todo'; ir('central')" });
     if (quietos.length) a.push({ k:'quieto', n:quietos.length, t: (quietos.length === 1 ? 'Un cliente' : quietos.length + ' clientes') + ` con saldo y sin movimiento hace más de ${cfg.diasSinMov} días`, nivel:'azul', ir:"verClientes('quieto')" });
     return a;
   });
@@ -2904,17 +3082,17 @@ function verComprobante(id){
 function abrirVisor(o){
   $('#visor-ico').innerHTML = ico('archivo');
   $('#visor-titulo').textContent = o.titulo; $('#visor-sub').textContent = o.sub || '';
-  const fuera = $('#visor-fuera'), ej = o.mov && o.mov.ejemplo; fuera.innerHTML = ico('abrirFuera') + ' <span>Abrir en Drive</span>';
+  const fuera = $('#visor-fuera'), ej = o.ejemplo || (o.mov && o.mov.ejemplo); fuera.innerHTML = ico('abrirFuera') + ' <span>Abrir en Drive</span>';
   // En los ejemplos el link es inventado: en vez de abrir Drive (daría error), se avisa.
   if (ej){ fuera.removeAttribute('href'); fuera.onclick = () => avisar('Es un comprobante de ejemplo: en la página real abre el archivo en Drive', 'drive'); }
   else { fuera.href = o.link; fuera.onclick = null; }
-  $('#visor-cuerpo').innerHTML = ej ? comprobanteEjemplo(o.mov)
+  $('#visor-cuerpo').innerHTML = ej ? (o.html || comprobanteEjemplo(o.mov))
     : `<div class="visor-carga">${ico('drive')}<span>Abriendo el archivo de Drive…</span></div>
        <iframe src="${esc(linkVista(o.link))}" title="Comprobante" allow="autoplay" referrerpolicy="no-referrer" onload="this.previousElementSibling.remove()"></iframe>
        <div class="visor-nota">${ico('info')}<span>Si no se ve, el archivo no está compartido. En Drive: <b>Compartir → Cualquier persona con el enlace</b> (o con la cuenta del free shop).
          <button class="link" onclick="ventanaComprobante('${esc(o.link)}')">Abrir en una ventana aparte</button></span></div>`;
   $('#visor').classList.remove('hidden', 'cerrando');
-  registrar('Abrió un comprobante' + (o.mov ? ' de ' + nomCli(o.mov.cli) : ''));
+  registrar('Abrió un comprobante' + (o.mov && o.mov.cli ? ' de ' + nomCli(o.mov.cli) : o.quien ? ' ' + o.quien : ''));
 }
 function ventanaComprobante(l){ window.open(linkVista(l), 'comprobante', 'popup=yes,width=880,height=900'); }
 function cerrarVisor(){ const v = $('#visor'); if (!v || v.classList.contains('hidden')) return; v.classList.add('cerrando'); setTimeout(() => { v.classList.add('hidden'); v.classList.remove('cerrando'); }, 180); }
@@ -3320,6 +3498,344 @@ async function reiniciar(){
 }
 // Las credenciales cambiadas en la demo se guardan con los datos del navegador.
 function aplicarPins(){ const ps = D().pins || {}; Object.keys(ps).forEach(k => { if (PERFILES[k]) PERFILES[k].pin = ps[k]; }); }
+
+
+/* ===== js/16-central.js ===== */
+/* =====================================================================
+   CAJA CENTRAL (Caja 10 · Tesorería y Administración)
+   - Lo que entrega cada caja (cierre del día o retiro parcial), por moneda.
+   - El efectivo que hay en la Caja 10, en dólares, pesos y reales.
+   - El depósito al banco con su comprobante: ese efectivo sale de la caja.
+   - Conteo de billetes al recibir, al depositar y en el arqueo.
+   El efectivo de los clientes que pagan en la Tesorería también entra acá,
+   y las devoluciones de saldo en efectivo salen.
+   ===================================================================== */
+const CEN = { tab:'cajas', per:'hoy', caja:'todas', m:'USD', ver:50, anim:null };
+FORMATOS.USD = n => dinero(n, 'USD'); FORMATOS.UYU = n => dinero(n, 'UYU'); FORMATOS.BRL = n => dinero(n, 'BRL');
+const cuentaBanco = id => (D().config.cuentas.find(c => c.id === id) || { t:'—' }).t;
+
+// Todo lo que entra y sale de la caja central, en orden (v con signo, en su moneda).
+function movimientosCentral(){
+  return memo('central', () => {
+    const l = [];
+    D().rendiciones.forEach(r => ORDEN_MONEDAS.forEach(m => { if (r.porM[m]) l.push({ f:r.f, h:r.h, m, v:r.porM[m], k:'ent', t:'Entrega de la Caja ' + r.caja, d:r.tipo, fn:`fichaEntrega('${r.id}')` }); }));
+    D().mov.forEach(x => {
+      if (x.anul || x.medio !== 'Efectivo en tesorería') return;
+      if (x.tipo === 'dep' && x.est !== 'pendiente') l.push({ f:x.f, h:x.h, m:x.m, v:x.imp, k:'cli', t:'Anticipo en efectivo', d:nomCli(x.cli), fn:`fichaMov('${x.id}')` });
+      if (x.tipo === 'dev') l.push({ f:x.f, h:x.h, m:x.m, v:-x.imp, k:'dev', t:'Devolución de saldo', d:nomCli(x.cli), fn:`fichaMov('${x.id}')` });
+    });
+    D().bancos.forEach(b => l.push({ f:b.f, h:b.h, m:b.m, v:-b.imp, k:'ban', t:'Depósito al banco', d:cuentaBanco(b.cuenta) + ' · boleta ' + b.boleta, fn:`fichaBanco('${b.id}')` }));
+    return l.sort((a, b) => (a.f + a.h).localeCompare(b.f + b.h));
+  });
+}
+function saldoCentral(m){ return memo('sc' + m, () => r2(movimientosCentral().filter(x => x.m === m).reduce((s, x) => s + x.v, 0))); }
+// Lo que entró ANTES de hoy y todavía no se depositó (es lo que el aviso pide llevar al banco).
+function sinDepositarAnterior(m){
+  return memo('sda' + m, () => { const h = hoy(), ms = movimientosCentral().filter(x => x.m === m);
+    return Math.max(0, r2(ms.filter(x => x.v > 0 && x.f < h).reduce((s, x) => s + x.v, 0) + ms.filter(x => x.v < 0).reduce((s, x) => s + x.v, 0))); });
+}
+const equivUSD = porM => r2(ORDEN_MONEDAS.reduce((s, m) => s + (porM[m] || 0) / (D().config.tc[m] || 1), 0));
+const montosTxt = porM => ORDEN_MONEDAS.filter(m => porM[m]).map(m => dinero(porM[m], m)).join(' · ') || '—';
+function sumaPorM(lista){ const p = { USD:0, UYU:0, BRL:0 }; lista.forEach(r => ORDEN_MONEDAS.forEach(m => p[m] = r2(p[m] + (r.porM[m] || 0)))); return p; }
+
+/* =====================================================================
+   LA PANTALLA
+   ===================================================================== */
+RENDER.central = function(){
+  const h = hoy(), anim = CEN.anim; CEN.anim = null;
+  const entHoy = D().rendiciones.filter(r => r.f === h), banHoy = D().bancos.filter(b => b.f === h);
+  const ultArq = D().arqueos.slice().sort((a, b) => (b.f + b.h).localeCompare(a.f + a.h))[0];
+  encabezado('Caja central', 'El efectivo que entrega cada caja y lo que la Caja 10 deposita en el banco, con su comprobante.',
+    `<button class="btn btn-linea" onclick="arqueoCentral()">${ico('calculadora')} Contar la caja</button><button class="btn btn-linea" onclick="recibirCaja()">${ico('recibir')} Recibir de una caja</button><button class="btn btn-acento" onclick="depositoBanco()">${ico('deposito')} Depósito al banco</button>`);
+  $('#vista').innerHTML = `
+    <div class="cen-saldos">${ORDEN_MONEDAS.map((m, i) => { const s = saldoCentral(m), ant = sinDepositarAnterior(m);
+      return `<div class="cen-mon" style="--i:${i}"><div class="cen-mon-cab"><span class="cen-sim">${MONEDAS[m].s}</span><span><small>Efectivo en la Caja 10</small><b>${MONEDAS[m].t}</b></span></div>
+        <div class="cen-v num" id="cen-v-${m}" ${anim ? '' : `data-contar="${s}" data-fmt="${m}"`}>${dinero(anim ? anim[m] : s, m)}</div>
+        <div class="cen-eq">${m !== 'USD' ? '≈ ' + usd0(s / D().config.tc[m]) + ' a la cotización de hoy' : '&nbsp;'}</div>
+        ${ant > 0.004 ? `<div class="cen-ant">${ico('reloj')}<span><b>${dinero(ant, m)}</b> de días anteriores sin depositar</span></div>` : `<div class="cen-ant ok">${ico('ok')}<span>Lo de días anteriores ya está en el banco</span></div>`}
+        <button class="btn ${ant > 0.004 ? 'btn-acento' : 'btn-linea'} btn-sm" onclick="depositoBanco('${m}')" ${s <= 0.004 ? 'disabled' : ''}>${ico('deposito')} Depositar ${MONEDAS[m].t.toLowerCase()}</button></div>`; }).join('')}</div>
+    <div class="cen-hoy">
+      <button class="cen-dato" onclick="CEN.tab = 'cajas'; CEN.per = 'hoy'; refrescar()"><small>Hoy recibió de las cajas</small><b>${montosTxt(sumaPorM(entHoy))}</b><span>${entHoy.length} entrega${entHoy.length === 1 ? '' : 's'}</span></button>
+      <button class="cen-dato" onclick="CEN.tab = 'banco'; CEN.per = 'hoy'; refrescar()"><small>Hoy depositó en el banco</small><b>${banHoy.length ? banHoy.map(b => dinero(b.imp, b.m)).join(' · ') : '—'}</b><span>${banHoy.length} depósito${banHoy.length === 1 ? '' : 's'}</span></button>
+      <button class="cen-dato" onclick="arqueoCentral()"><small>Último arqueo (conteo de la caja)</small><b>${ultArq ? cuando(ultArq.f) + ' · ' + ultArq.h : 'Nunca'}</b><span>${ultArq ? (ORDEN_MONEDAS.some(m => ultArq.dif[m]) ? '<span class="neg">Con diferencia: ' + montosTxt(ultArq.dif) + '</span>' : 'Sin diferencias · ' + esc(ultArq.u)) : ''}</span></button>
+    </div>
+    <div class="fila-fin mt">
+      <div class="segmento">${[['cajas', 'Lo que entregó cada caja'], ['banco', 'Depósitos al banco'], ['libro', 'Movimientos de la caja']].map(([v, t]) => `<button class="${v === CEN.tab ? 'on' : ''}" onclick="CEN.tab = '${v}'; CEN.ver = 50; refrescar()">${t}</button>`).join('')}</div>
+      ${selPeriodo(CEN.per, 'perCen')}
+    </div>
+    <div class="mt" id="cen-tab">${CEN.tab === 'cajas' ? tabEntregas() : CEN.tab === 'banco' ? tabBanco() : tabLibro()}</div>`;
+  if (anim) setTimeout(() => ORDEN_MONEDAS.forEach(m => { if (anim[m] !== saldoCentral(m)){ const el = $('#cen-v-' + m); el.closest('.cen-mon').classList.add('cambia'); contar(el, anim[m], saldoCentral(m), 1300, m); } }), 250);
+};
+function perCen(p){ CEN.per = p; CEN.ver = 50; refrescar(); }
+function guardarAnim(){ CEN.anim = {}; ORDEN_MONEDAS.forEach(m => CEN.anim[m] = saldoCentral(m)); }
+
+// Pestaña 1: resumen por caja del período + la lista de entregas
+function tabEntregas(){
+  const ent = D().rendiciones.filter(r => enPeriodo(r.f, CEN.per) && (CEN.caja === 'todas' || r.caja === Number(CEN.caja))).sort((a, b) => (b.f + b.h).localeCompare(a.f + a.h));
+  const filas = CAJAS.map(n => { const l = ent.filter(r => r.caja === n); return { n, l, p:sumaPorM(l) }; }), tot = sumaPorM(ent);
+  const pg = paginar(ent, CEN, 'CEN.ver += 50; refrescar()');
+  return `<div class="herr"><select class="sel" onchange="CEN.caja = this.value; refrescar()" aria-label="Caja"><option value="todas">Todas las cajas</option>${CAJAS.map(n => `<option value="${n}" ${String(n) === String(CEN.caja) ? 'selected' : ''}>Caja ${n}</option>`).join('')}</select>
+      <div class="fila" style="margin-left:auto"><button class="btn btn-linea btn-sm" onclick="imprimirEntregas()">${ico('imprimir')} Imprimir</button>${btnExportar('exportarEntregas')}</div></div>
+    <div class="tabla-caja"><div class="tabla-scroll"><table class="tabla">
+      <thead><tr><th>Caja</th><th class="derecha">Entregas</th><th class="derecha">Dólares</th><th class="derecha">Pesos</th><th class="derecha">Reales</th><th class="derecha">Total en US$</th></tr></thead>
+      <tbody>${filas.filter(r => CEN.caja === 'todas' || r.n === Number(CEN.caja)).map((r, i) => `<tr class="clic aparece ${r.l.length ? '' : 'anulada'}" style="--i:${i}" onclick="CEN.caja = '${r.n}'; refrescar()">
+        <td><span class="chip-caja">Caja ${r.n}</span></td><td class="derecha num">${r.l.length || '—'}</td>
+        ${ORDEN_MONEDAS.map(m => `<td class="derecha num">${r.p[m] ? dinero(r.p[m], m) : '—'}</td>`).join('')}<td class="derecha num fuerte">${r.l.length ? usd(equivUSD(r.p)) : '—'}</td></tr>`).join('')}</tbody>
+      <tfoot><tr><td>Total</td><td class="derecha num">${ent.length}</td>${ORDEN_MONEDAS.map(m => `<td class="derecha num">${dinero(tot[m], m)}</td>`).join('')}<td class="derecha num">${usd(equivUSD(tot))}</td></tr></tfoot></table></div></div>
+    <div class="sub-t mt">${ico('recibir')} Entregas una por una</div>
+    <div class="tabla-caja mt-s"><div class="tabla-scroll"><table class="tabla">
+      <thead><tr><th>Caja</th><th>Fecha</th><th>Tipo</th><th>Recibió</th><th class="derecha">Lo que entregó</th></tr></thead>
+      <tbody>${pg.filas.map((r, i) => `<tr class="clic aparece" style="--i:${Math.min(i, 20)}" onclick="fichaEntrega('${r.id}')"><td><span class="chip-caja">Caja ${r.caja}</span></td><td class="num">${fCorta(r.f)} <span class="muted">${r.h}</span></td>
+        <td>${r.tipo}${r.billetes ? ' <span class="chip c-azul sin-punto">Billetes contados</span>' : ''}</td><td>${esc(r.u)}</td><td class="derecha num fuerte">${montosTxt(r.porM)}</td></tr>`).join('') || `<tr><td colspan="5">${vacio('No hay entregas en este período.')}</td></tr>`}</tbody></table></div>${pg.mas}</div>`;
+}
+// Pestaña 2: los depósitos al banco, con el comprobante
+function tabBanco(){
+  const l = D().bancos.filter(b => enPeriodo(b.f, CEN.per)).sort((a, b) => (b.f + b.h).localeCompare(a.f + a.h)), pg = paginar(l, CEN, 'CEN.ver += 50; refrescar()');
+  const tot = { USD:0, UYU:0, BRL:0 }; l.forEach(b => tot[b.m] = r2(tot[b.m] + b.imp));
+  return `<div class="banda-valor"><span>${ico('deposito')} ${l.length} depósito${l.length === 1 ? '' : 's'} al banco</span><span class="chips-mon">${ORDEN_MONEDAS.filter(m => tot[m]).map(m => `<span class="chip-mon">${dinero(tot[m], m)}</span>`).join('')}</span></div>
+    <div class="tabla-caja"><div class="tabla-scroll"><table class="tabla">
+      <thead><tr><th>Fecha</th><th>Cuenta</th><th>Boleta</th><th>Comprobante</th><th>Usuario</th><th class="derecha">Importe</th></tr></thead>
+      <tbody>${pg.filas.map((b, i) => `<tr class="clic aparece" style="--i:${Math.min(i, 20)}" onclick="fichaBanco('${b.id}')"><td class="num">${fCorta(b.f)} <span class="muted">${b.h}</span></td><td>${esc(cuentaBanco(b.cuenta))}${b.del ? `<span class="p-cod">Lo del ${fCorta(b.del)}</span>` : ''}</td>
+        <td class="num">${esc(b.boleta)}</td><td>${b.link ? `<button class="btn btn-suave btn-xs" onclick="event.stopPropagation(); verComprobanteBanco('${b.id}')">${ico('archivo')} Ver</button>` : '<span class="chip c-amarillo">Falta</span>'}</td>
+        <td>${esc(b.u)}</td><td class="derecha num fuerte">${dinero(b.imp, b.m)}</td></tr>`).join('') || `<tr><td colspan="6">${vacio('No hay depósitos al banco en este período.')}</td></tr>`}</tbody></table></div>${pg.mas}</div>`;
+}
+// Pestaña 3: el libro de la caja central, moneda por moneda, con el saldo después de cada movimiento
+function tabLibro(){
+  const m = CEN.m; let s = 0;
+  const todos = movimientosCentral().filter(x => x.m === m).map(x => (s = r2(s + x.v), Object.assign({ s }, x)));
+  const l = todos.filter(x => enPeriodo(x.f, CEN.per)).reverse(), pg = paginar(l, CEN, 'CEN.ver += 50; refrescar()');
+  const ICO = { ent:'recibir', cli:'usuario', dev:'volver', ban:'deposito' };
+  return `<div class="herr"><div class="segmento seg-chico">${ORDEN_MONEDAS.map(k => `<button class="${k === m ? 'on' : ''}" onclick="CEN.m = '${k}'; refrescar()">${MONEDAS[k].s} ${MONEDAS[k].t}</button>`).join('')}</div></div>
+    <div class="tabla-caja"><div class="tabla-scroll"><table class="tabla">
+      <thead><tr><th>Movimiento</th><th>Fecha</th><th>Detalle</th><th class="derecha">Entra</th><th class="derecha">Sale</th><th class="derecha">Queda en caja</th></tr></thead>
+      <tbody>${pg.filas.map((x, i) => `<tr class="clic aparece" style="--i:${Math.min(i, 20)}" onclick="${x.fn}"><td><span class="tipo-mov ${x.v >= 0 ? 't-dep' : 't-com'}">${ico(ICO[x.k])}${x.t}</span></td>
+        <td class="num">${fCorta(x.f)} <span class="muted">${x.h}</span></td><td>${esc(x.d)}</td>
+        <td class="derecha num pos">${x.v > 0 ? dinero(x.v, m) : ''}</td><td class="derecha num">${x.v < 0 ? dinero(-x.v, m) : ''}</td><td class="derecha num fuerte">${dinero(x.s, m)}</td></tr>`).join('') || `<tr><td colspan="6">${vacio('Sin movimientos en este período.')}</td></tr>`}</tbody></table></div>${pg.mas}</div>`;
+}
+
+/* =====================================================================
+   IMPORTES POR MONEDA, CON CONTEO DE BILLETES
+   ===================================================================== */
+function bloqueMoneda(pref, m, valor, abierto, extra){
+  const M = MONEDAS[m];
+  return `<div class="cm" id="${pref}-b-${m}">
+    <div class="cm-cab"><span class="cen-sim chico">${M.s}</span><b>${M.t}</b>${extra || ''}<button type="button" class="link cm-toggle" onclick="alternarConteo('${pref}', '${m}')">${ico('calculadora')} <span>${abierto ? 'Ocultar billetes' : 'Contar billetes'}</span></button></div>
+    <div class="con-pre grande"><span>${M.s}</span><input id="${pref}-${m}" inputmode="decimal" placeholder="0" autocomplete="off" value="${valor ? (M.dec ? fmt2.format(valor) : fmt0.format(valor)) : ''}" oninput="tocoImporte('${pref}', '${m}')"></div>
+    <div class="cm-conteo ${abierto ? '' : 'hidden'}" id="${pref}-c-${m}">
+      ${BILLETES[m].map(v => `<label class="cm-b"><span class="cm-billete">${M.s} ${fmt0.format(v)}</span><span class="cm-x">×</span><input type="number" min="0" step="1" inputmode="numeric" data-b="${v}" placeholder="0" oninput="sumarConteo('${pref}', '${m}')"><em class="num" data-sub="${v}"></em></label>`).join('')}
+      <label class="cm-b cm-monedas"><span class="cm-billete">Monedas</span><span class="cm-x"></span><input inputmode="decimal" data-b="mon" placeholder="0" oninput="sumarConteo('${pref}', '${m}')"><em></em></label>
+      <div class="cm-total"><span>Total contado</span><b class="num" id="${pref}-t-${m}">${dinero(0, m)}</b></div>
+    </div></div>`;
+}
+function alternarConteo(pref, m){
+  const c = $(`#${pref}-c-${m}`), abre = c.classList.contains('hidden');
+  c.classList.toggle('hidden', !abre);
+  $(`#${pref}-b-${m} .cm-toggle span`).textContent = abre ? 'Ocultar billetes' : 'Contar billetes';
+  if (abre){ const i = $('input', c); if (i) setTimeout(() => i.focus(), 40); sumarConteo(pref, m); }
+}
+function sumarConteo(pref, m){
+  const c = $(`#${pref}-c-${m}`); let t = 0;
+  $$('input[data-b]', c).forEach(i => {
+    const v = i.dataset.b === 'mon' ? numero(i.value) : (Number(i.value) || 0) * Number(i.dataset.b);
+    t += v; const sub = $(`em[data-sub="${i.dataset.b}"]`, c); if (sub) sub.textContent = v ? dinero(v, m) : '';
+  });
+  t = r2(t); $(`#${pref}-t-${m}`).textContent = dinero(t, m);
+  const inp = $(`#${pref}-${m}`); inp.value = t ? (MONEDAS[m].dec ? fmt2.format(t) : fmt0.format(t)) : ''; inp.classList.add('de-conteo');
+  tocoImporte(pref, m, true);
+}
+function tocoImporte(pref, m, desdeConteo){ if (!desdeConteo) $(`#${pref}-${m}`).classList.remove('de-conteo'); if (typeof window['alCambiar_' + pref] === 'function') window['alCambiar_' + pref](m); }
+function leerMonto(pref, m){ const i = $(`#${pref}-${m}`); return i ? r2(numero(i.value)) : 0; }
+// Los billetes contados (solo si se usó el conteo y coincide con el importe)
+function leerBilletes(pref, m){
+  const c = $(`#${pref}-c-${m}`); if (!c || c.classList.contains('hidden') || !$(`#${pref}-${m}`).classList.contains('de-conteo')) return null;
+  const b = {}; $$('input[data-b]', c).forEach(i => { const v = i.dataset.b === 'mon' ? numero(i.value) : Number(i.value) || 0; if (v) b[i.dataset.b] = v; });
+  return Object.keys(b).length ? b : null;
+}
+function billetesTxt(b, m){ return Object.keys(b).filter(k => k !== 'mon').sort((a, c) => c - a).map(k => `<span class="cm-chip">${b[k]} × ${MONEDAS[m].s} ${fmt0.format(k)}</span>`).join('') + (b.mon ? `<span class="cm-chip">Monedas ${dinero(b.mon, m)}</span>` : ''); }
+
+/* =====================================================================
+   RECIBIR DE UNA CAJA
+   ===================================================================== */
+const REC = { caja:null, tipo:'Cierre del día' };
+function recibirCaja(caja){
+  REC.caja = caja || null; REC.tipo = new Date().getHours() >= 18 ? 'Cierre del día' : 'Retiro parcial';
+  abrirModal({ titulo:'Recibir efectivo de una caja', sub:'Lo que la caja le entrega a la Caja 10. Se puede contar billete por billete.', ancho:'md', foco:false,
+    cuerpo:`<div class="form">
+      ${campo('¿De qué caja?', `<div class="rec-cajas">${CAJAS.map(n => `<button type="button" class="${n === REC.caja ? 'on' : ''}" onclick="elegirCajaRec(${n})"><small>Caja</small><b>${n}</b></button>`).join('')}</div>`, { ancho:true, req:true })}
+      <div class="ancho" id="rec-info"></div>
+      ${campo('¿Qué es?', `<div class="segmento" id="rec-tipo">${['Cierre del día', 'Retiro parcial'].map(t => `<button type="button" class="${t === REC.tipo ? 'on' : ''}" onclick="REC.tipo = '${t}'; $$('#rec-tipo button').forEach(b => b.classList.toggle('on', b.textContent === '${t}'))">${t}</button>`).join('')}</div>`, { ayuda:'Retiro parcial: cuando se saca efectivo durante el día para no acumular en la caja.' })}
+      ${campo('Fecha', inp('f', hoy(), 'date', `max="${hoy()}"`), {})}
+      <div class="ancho cm-grid">${ORDEN_MONEDAS.map(m => bloqueMoneda('rec', m)).join('')}</div>
+      <div class="ancho" id="rec-total"></div>
+      ${campo('Nota', inp('nota', '', 'text', 'placeholder="Opcional"'), { ancho:true })}
+    </div>`,
+    pie:`<button class="btn btn-linea" onclick="cerrarModal()">Cancelar</button><button class="btn btn-acento btn-grande" onclick="guardarEntrega()">${ico('ok')} Recibido</button>`,
+    alAbrir: () => { pintarInfoRec(); alCambiar_rec(); } });
+}
+function elegirCajaRec(n){ REC.caja = n; $$('.rec-cajas button').forEach((b, i) => b.classList.toggle('on', i + 1 === n)); pintarInfoRec(); }
+function pintarInfoRec(){
+  const box = $('#rec-info'); if (!box) return;
+  if (!REC.caja){ box.innerHTML = ''; return; }
+  const ya = D().rendiciones.filter(r => r.f === hoy() && r.caja === REC.caja);
+  box.innerHTML = ya.length ? `<div class="caja-info">${ico('info')}<span>Hoy la Caja ${REC.caja} ya entregó ${montosTxt(sumaPorM(ya))} (${ya.map(r => r.tipo.toLowerCase() + ' ' + r.h).join(', ')}).</span></div>` : '';
+}
+window.alCambiar_rec = function(){
+  const p = {}; ORDEN_MONEDAS.forEach(m => p[m] = leerMonto('rec', m));
+  const box = $('#rec-total'); if (box) box.innerHTML = ORDEN_MONEDAS.some(m => p[m]) ? `<div class="antes-despues cm-res"><span><small>Recibe la Caja 10</small><b class="num">${montosTxt(p)}</b></span><span></span><span><small>Equivale a</small><b class="num">${usd(equivUSD(p))}</b></span></div>` : '';
+};
+function guardarEntrega(){
+  const f = leerForm($('#modal-cuerpo')), porM = {}, billetes = {};
+  if (!REC.caja) return error('Elegí la caja que entrega');
+  ORDEN_MONEDAS.forEach(m => { porM[m] = leerMonto('rec', m); const b = leerBilletes('rec', m); if (b) billetes[m] = b; });
+  if (!ORDEN_MONEDAS.some(m => porM[m] > 0)) return error('Falta lo que entrega, en al menos una moneda');
+  guardarAnim();
+  const r = { id:Store.id('r'), f:f.f || hoy(), h:hora(), caja:REC.caja, tipo:REC.tipo, porM, u:usuarioTxt(), nota:f.nota };
+  if (Object.keys(billetes).length) r.billetes = billetes;
+  D().rendiciones.push(r);
+  registrar(`Recibió de la Caja ${r.caja} (${r.tipo.toLowerCase()}): ${montosTxt(porM)}`);
+  guardar(); cerrarModal(); CEN.tab = 'cajas'; CEN.per = 'hoy';
+  if (seccionActual === 'central') refrescar(); else ir('central');
+  avisar(`Recibido de la Caja ${r.caja}: ${montosTxt(porM)}`, 'recibir', true);
+}
+function fichaEntrega(id){
+  const r = D().rendiciones.find(x => x.id === id);
+  abrirModal({ titulo:`Entrega de la Caja ${r.caja}`, sub:`${r.tipo} · ${fLarga(r.f)} · ${r.h} · recibió ${esc(r.u)}`, ancho:'md', foco:false,
+    cuerpo:`<div class="cm-ver">${ORDEN_MONEDAS.filter(m => r.porM[m]).map(m => `<div class="cm-ver-m"><div class="cm-cab"><span class="cen-sim chico">${MONEDAS[m].s}</span><b>${MONEDAS[m].t}</b></div>
+        <div class="cm-ver-v num">${dinero(r.porM[m], m)}</div>${r.billetes && r.billetes[m] ? `<div class="cm-chips">${billetesTxt(r.billetes[m], m)}</div>` : '<div class="muted chico">Sin conteo de billetes</div>'}</div>`).join('')}</div>
+      <div class="caja-info mt">${ico('dinero')}<span>Total de la entrega: <b>${usd(equivUSD(r.porM))}</b> a la cotización de hoy.${r.nota ? ' Nota: ' + esc(r.nota) : ''}</span></div>`,
+    pie:`<button class="btn btn-prim" onclick="cerrarModal()">Listo</button>` });
+}
+
+/* =====================================================================
+   DEPÓSITO AL BANCO (el efectivo sale de la caja central)
+   ===================================================================== */
+const DBA = { m:'USD' };
+function depositoBanco(m){
+  DBA.m = m || ORDEN_MONEDAS.find(k => sinDepositarAnterior(k) > 0.004) || ORDEN_MONEDAS.find(k => saldoCentral(k) > 0.004) || 'USD';
+  abrirModal({ titulo:'Depósito al banco', sub:'Se lleva efectivo de la Caja 10 al banco. Al guardarlo, ese dinero sale de la caja.', ancho:'md', foco:false,
+    cuerpo:`<div class="form">
+      ${campo('¿Qué moneda?', `<div class="dba-mon">${ORDEN_MONEDAS.map(k => `<button type="button" class="${k === DBA.m ? 'on' : ''}" onclick="elegirMonedaBanco('${k}')"><span class="cen-sim chico">${MONEDAS[k].s}</span><span><b>${MONEDAS[k].t}</b><small>En caja ${dinero(saldoCentral(k), k)}</small></span></button>`).join('')}</div>`, { ancho:true })}
+      <div class="ancho" id="dba-imp"></div>
+      ${campo('Fecha del depósito', inp('f', hoy(), 'date', `max="${hoy()}"`), { req:true })}
+      ${campo('Cuenta', `<select name="cuenta" id="dba-cuenta"></select>`, { req:true })}
+      ${campo('N.º de boleta', inp('boleta', '', 'text', 'placeholder="El número del comprobante del banco" autocomplete="off"'), { req:true })}
+      ${campo('Comprobante en Google Drive', `<div class="con-boton"><span class="ico-campo">${ico('drive')}</span><input name="link" placeholder="Pegá acá el link del comprobante" autocomplete="off" inputmode="url"><button type="button" class="btn btn-linea" onclick="probarLinkBanco()">${ico('ojo')} Ver</button></div>`, { ancho:true, ayuda:'Se puede subir ahora o más tarde (desde la ficha del depósito). Mientras falte, queda en los avisos.' })}
+      ${campo('Nota', inp('nota', '', 'text', 'placeholder="Opcional"'), { ancho:true })}
+    </div>`,
+    pie:`<button class="btn btn-linea" onclick="cerrarModal()">Cancelar</button><button class="btn btn-acento btn-grande" onclick="guardarBanco()">${ico('ok')} Registrar depósito</button>`,
+    alAbrir: () => elegirMonedaBanco(DBA.m) });
+}
+function elegirMonedaBanco(m){
+  DBA.m = m;
+  $$('.dba-mon button').forEach((b, i) => b.classList.toggle('on', ORDEN_MONEDAS[i] === m));
+  const s = saldoCentral(m), ant = sinDepositarAnterior(m);
+  $('#dba-imp').innerHTML = bloqueMoneda('dba', m, ant > 0.004 ? ant : s, false,
+    `<span class="dba-rap">${ant > 0.004 && ant < s - 0.004 ? `<button type="button" class="pildora" onclick="ponerMontoBanco(${ant})">Lo de días anteriores</button>` : ''}<button type="button" class="pildora" onclick="ponerMontoBanco(${s})">Todo lo que hay</button></span>`) + '<div id="dba-res" class="mt-s"></div>';
+  const cs = D().config.cuentas.filter(c => c.id !== 'c5' && (!c.m || c.m === m));
+  $('#dba-cuenta').innerHTML = cs.map(c => `<option value="${c.id}">${esc(c.t)}</option>`).join('');
+  alCambiar_dba();
+}
+function ponerMontoBanco(v){ const i = $('#dba-' + DBA.m); i.value = MONEDAS[DBA.m].dec ? fmt2.format(v) : fmt0.format(v); i.classList.remove('de-conteo'); alCambiar_dba(); }
+window.alCambiar_dba = function(){
+  const m = DBA.m, v = leerMonto('dba', m), s = saldoCentral(m), queda = r2(s - v), box = $('#dba-res'); if (!box) return;
+  box.innerHTML = `<div class="antes-despues ${queda < -0.004 ? 'mal' : ''}"><span><small>En la Caja 10 ahora</small><b class="num">${dinero(s, m)}</b></span><span class="ad-flecha">${ico('der')}</span><span><small>Queda en caja</small><b class="num">${dinero(queda, m)}</b></span>
+    <div class="ad-barra"><i style="width:${s > 0 ? Math.max(0, Math.min(1, queda / s)) * 100 : 0}%"></i></div></div>${queda < -0.004 ? `<div class="caja-info alerta mt-s">${ico('alerta')}<span>No se puede depositar más de lo que hay en la caja.</span></div>` : ''}`;
+};
+function probarLinkBanco(){ const l = $('[name=link]').value.trim(); if (!l) return error('Pegá primero el link del comprobante'); abrirVisor({ link:l, titulo:'Comprobante del banco', sub:'Vista previa' }); }
+function guardarBanco(){
+  const f = leerForm($('#modal-cuerpo')), m = DBA.m, imp = leerMonto('dba', m);
+  if (!(imp > 0)) return error('Falta el importe');
+  if (imp > saldoCentral(m) + 0.004) return error('No hay tanto efectivo en la caja central');
+  if (!f.boleta) return error('Falta el número de boleta');
+  if (f.link && !/^https?:\/\//i.test(f.link)) return error('El link tiene que empezar con https://');
+  guardarAnim();
+  const b = { id:Store.id('b'), f:f.f || hoy(), h:hora(), m, imp, cuenta:f.cuenta, boleta:f.boleta, link:f.link, u:usuarioTxt(), nota:f.nota };
+  const bil = leerBilletes('dba', m); if (bil) b.billetes = bil;
+  D().bancos.push(b);
+  registrar(`Depositó en el banco ${dinero(imp, m)} (${cuentaBanco(b.cuenta)}, boleta ${b.boleta})${b.link ? '' : ' · falta el comprobante'}`);
+  guardar(); cerrarModal(); CEN.tab = 'banco';
+  if (seccionActual === 'central') refrescar(); else ir('central');
+  avisar(`Depósito registrado: ${dinero(imp, m)} salieron de la Caja 10`, 'deposito', true);
+}
+function fichaBanco(id){
+  const b = D().bancos.find(x => x.id === id);
+  abrirModal({ titulo:'Depósito al banco', sub:`${fLarga(b.f)} · ${b.h} · ${esc(b.u)}`, ancho:'md', foco:false,
+    cuerpo:`<div class="mov-grande"><b class="num">${dinero(b.imp, b.m)}</b><span>${esc(cuentaBanco(b.cuenta))}${b.del ? ' · lo recibido el ' + fCorta(b.del) : ''}</span></div>
+      <div class="datos mt"><span><small>N.º de boleta</small><b>${esc(b.boleta)}</b></span><span><small>Moneda</small><b>${MONEDAS[b.m].t}</b></span>${b.nota ? `<span><small>Nota</small><b>${esc(b.nota)}</b></span>` : ''}</div>
+      ${b.billetes ? `<div class="cm-chips mt">${billetesTxt(b.billetes, b.m)}</div>` : ''}
+      <div class="comp-caja mt">${b.link ? `<button class="comp-btn" onclick="verComprobanteBanco('${b.id}')"><span class="comp-hoja">${ico('archivo')}</span><span><b>Comprobante del depósito</b><small>${esc(b.link.replace(/^https?:\/\//, '').slice(0, 46))}…</small></span>${ico('ojo')}<em>Abrir</em></button>`
+        : `<div class="comp-falta">${ico('alerta')}<span><b>Falta el comprobante del banco.</b> Subilo a Drive y pegá el link.</span><button class="btn btn-sm btn-prim" onclick="linkBanco('${b.id}')">${ico('link')} Agregar link</button></div>`}</div>`,
+    pie:`${b.link ? `<button class="btn btn-linea izq" onclick="linkBanco('${b.id}')">${ico('link')} Cambiar link</button>` : ''}<button class="btn btn-prim" onclick="cerrarModal()">Listo</button>` });
+}
+async function linkBanco(id){
+  const b = D().bancos.find(x => x.id === id), l = await pedirTexto('Comprobante del banco', b.link, 'Link de Google Drive', 'Pegá el link para compartir del archivo.');
+  if (!l) return; if (!/^https?:\/\//i.test(l)) return error('El link tiene que empezar con https://');
+  b.link = l; b.ejemplo = false; registrar(`Agregó el comprobante del depósito al banco de ${dinero(b.imp, b.m)}`); guardar(); fichaBanco(id); pintarNav(); avisar('Comprobante guardado', 'archivo');
+}
+function verComprobanteBanco(id){
+  const b = D().bancos.find(x => x.id === id); if (!b || !b.link) return;
+  abrirVisor({ link:b.link, ejemplo:b.ejemplo, html:b.ejemplo ? boletaEjemplo(b) : '', quien:'del banco', titulo:'Depósito al banco · ' + dinero(b.imp, b.m), sub:`${cuentaBanco(b.cuenta)} · ${fCorta(b.f)}` });
+}
+// Boleta de depósito de muestra (solo en los datos de ejemplo)
+function boletaEjemplo(b){
+  const fila = (a, c) => `<div class="cp-f"><span>${a}</span><b>${c}</b></div>`;
+  return `<div class="comp-ej"><div class="comp-hoja-ej">
+      <div class="cpe-cab"><span class="cpe-banco">${ico('deposito')}</span><div><b>${esc(cuentaBanco(b.cuenta).split(' · ')[0])}</b><small>Boleta de depósito en efectivo</small></div></div>
+      <div class="cpe-ok">${ico('ok')} Depósito recibido</div>
+      <div class="cpe-monto">${dinero(b.imp, b.m)}</div>
+      <div class="cpe-fecha">${fCorta(b.f)} · ${b.h}</div>
+      <div class="cpe-sec">Depositante</div>${fila('Nombre', "Yury's Free Shop")}
+      <div class="cpe-sec">Cuenta</div>${fila('Cuenta', esc(cuentaBanco(b.cuenta)))}${fila('Moneda', MONEDAS[b.m].t)}
+      <div class="cpe-sec">Identificación</div>${fila('N.º de boleta', esc(b.boleta))}
+      <div class="cpe-qr" aria-hidden="true">${Array.from({ length:49 }, (_, i) => `<i class="${(i * 5 + Math.round(b.imp)) % 3 ? '' : 'n'}"></i>`).join('')}</div>
+    </div><div class="comp-sello">COMPROBANTE DE EJEMPLO</div>
+    <div class="visor-nota">${ico('info')}<span>Es una boleta <b>de ejemplo</b>, dibujada para la demostración. En la página real se ve el archivo que se subió a Google Drive, acá mismo.</span></div></div>`;
+}
+
+/* =====================================================================
+   ARQUEO: contar el efectivo de la Caja 10 y compararlo con la página
+   ===================================================================== */
+function arqueoCentral(){
+  abrirModal({ titulo:'Contar la caja central', sub:'Contá el efectivo que hay en la Caja 10, billete por billete. La página lo compara con lo que debería haber.', ancho:'lg', foco:false,
+    cuerpo:`<div class="cm-grid tres">${ORDEN_MONEDAS.map(m => `<div>${bloqueMoneda('arq', m, 0, true, `<span class="cm-deberia">Debería haber <b>${dinero(saldoCentral(m), m)}</b></span>`)}<div class="arq-dif" id="arq-d-${m}"></div></div>`).join('')}</div>`,
+    pie:`<button class="btn btn-linea" onclick="cerrarModal()">Cancelar</button><button class="btn btn-prim btn-grande" onclick="guardarArqueo()">${ico('ok')} Guardar el arqueo</button>`,
+    alAbrir: () => alCambiar_arq() });
+}
+window.alCambiar_arq = function(){
+  ORDEN_MONEDAS.forEach(m => {
+    const box = $('#arq-d-' + m); if (!box) return;
+    const v = leerMonto('arq', m), d = r2(v - saldoCentral(m)), vacio_ = !$('#arq-' + m).value;
+    box.className = 'arq-dif ' + (vacio_ ? '' : Math.abs(d) < 0.005 ? 'ok' : 'mal');
+    box.innerHTML = vacio_ ? 'Todavía no contaste' : Math.abs(d) < 0.005 ? `${ico('ok')} Coincide` : `${ico('alerta')} ${d > 0 ? 'Sobran' : 'Faltan'} ${dinero(Math.abs(d), m)}`;
+  });
+};
+function guardarArqueo(){
+  const dif = {}, contado = {};
+  if (ORDEN_MONEDAS.every(m => !$('#arq-' + m).value)) return error('Contá al menos una moneda');
+  ORDEN_MONEDAS.forEach(m => { if ($('#arq-' + m).value){ contado[m] = leerMonto('arq', m); dif[m] = r2(contado[m] - saldoCentral(m)); } else dif[m] = 0; });
+  D().arqueos.push({ id:Store.id('a'), f:hoy(), h:hora(), u:usuarioTxt(), dif, contado });
+  const conDif = ORDEN_MONEDAS.filter(m => dif[m]);
+  registrar('Contó la caja central: ' + (conDif.length ? 'diferencia de ' + conDif.map(m => (dif[m] > 0 ? '+' : '−') + dinero(Math.abs(dif[m]), m)).join(' · ') : 'sin diferencias'));
+  guardar(); cerrarModal(); refrescar(); avisar(conDif.length ? 'Arqueo guardado con diferencias: quedó anotado' : 'Arqueo guardado: todo coincide', conDif.length ? 'alerta' : 'ok', true);
+}
+
+/* ---------- Reporte impreso y Excel de lo que entregó cada caja ---------- */
+function imprimirEntregas(){
+  const ent = D().rendiciones.filter(r => enPeriodo(r.f, CEN.per) && (CEN.caja === 'todas' || r.caja === Number(CEN.caja))).sort((a, b) => (a.f + a.h).localeCompare(b.f + b.h));
+  const per = (PERIODOS.find(p => p[0] === CEN.per) || ['', ''])[1], tot = sumaPorM(ent);
+  $('#impresion').innerHTML = `<div class="imp">
+    <div class="imp-cab"><div class="imp-logo">${logoYurys()}</div><div class="imp-neg"><b>Lo que entregó cada caja a la Caja 10</b><span>${per}${CEN.caja !== 'todas' ? ' · Caja ' + CEN.caja : ''} · impreso el ${fCorta(hoy())} ${hora()} · ${usuarioTxt()}</span></div></div>
+    <table class="imp-t"><thead><tr><th>Fecha</th><th>Hora</th><th>Caja</th><th>Tipo</th><th class="d">Dólares</th><th class="d">Pesos</th><th class="d">Reales</th><th>Recibió</th></tr></thead>
+    <tbody>${ent.map(r => `<tr><td>${fCorta(r.f)}</td><td>${r.h}</td><td>Caja ${r.caja}</td><td>${r.tipo}</td>${ORDEN_MONEDAS.map(m => `<td class="d">${r.porM[m] ? dinero(r.porM[m], m) : '—'}</td>`).join('')}<td>${esc(r.u)}</td></tr>`).join('')}</tbody>
+    <tfoot><tr><td colspan="4">Total (${ent.length} entregas)</td>${ORDEN_MONEDAS.map(m => `<td class="d">${dinero(tot[m], m)}</td>`).join('')}<td></td></tr></tfoot></table>
+    <div class="imp-firmas"><span>Tesorería (Caja 10)</span><span>Administración</span></div>
+    <div class="imp-pie">Yury's Free Shop · Página hecha por Wydan Solutions</div></div>`;
+  setTimeout(() => window.print(), 80);
+}
+function exportarEntregas(){
+  exportarCSV('Entregas de las cajas', ['Fecha', 'Hora', 'Caja', 'Tipo', 'Dólares', 'Pesos', 'Reales', 'Recibió', 'Nota'],
+    D().rendiciones.filter(r => enPeriodo(r.f, CEN.per)).sort((a, b) => (a.f + a.h).localeCompare(b.f + b.h)).map(r => [fCorta(r.f), r.h, r.caja, r.tipo, numCSV(r.porM.USD), numCSV(r.porM.UYU), numCSV(r.porM.BRL), r.u, r.nota || '']));
+}
 
 
 /* ===== js/20-celular.js ===== */
